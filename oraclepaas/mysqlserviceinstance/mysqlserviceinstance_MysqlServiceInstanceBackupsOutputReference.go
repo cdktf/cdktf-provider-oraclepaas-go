@@ -2,9 +2,9 @@ package mysqlserviceinstance
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v2/jsii"
 
-	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/mysqlserviceinstance/internal"
+	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v2/mysqlserviceinstance/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

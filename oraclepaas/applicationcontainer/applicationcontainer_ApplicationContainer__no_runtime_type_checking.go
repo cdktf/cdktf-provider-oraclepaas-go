@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package applicationcontainer
 
@@ -66,6 +65,14 @@ func (a *jsiiProxy_ApplicationContainer) validatePutTimeoutsParameters(value *Ap
 }
 
 func validateApplicationContainer_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateApplicationContainer_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateApplicationContainer_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package databaseaccessrule
 
@@ -58,6 +57,14 @@ func (d *jsiiProxy_DatabaseAccessRule) validatePutTimeoutsParameters(value *Data
 }
 
 func validateDatabaseAccessRule_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateDatabaseAccessRule_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateDatabaseAccessRule_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

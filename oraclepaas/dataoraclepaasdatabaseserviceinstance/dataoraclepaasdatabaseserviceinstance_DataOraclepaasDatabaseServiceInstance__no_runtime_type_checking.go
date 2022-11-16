@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package dataoraclepaasdatabaseserviceinstance
 
@@ -54,6 +53,14 @@ func (d *jsiiProxy_DataOraclepaasDatabaseServiceInstance) validateOverrideLogica
 }
 
 func validateDataOraclepaasDatabaseServiceInstance_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataOraclepaasDatabaseServiceInstance_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataOraclepaasDatabaseServiceInstance_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 

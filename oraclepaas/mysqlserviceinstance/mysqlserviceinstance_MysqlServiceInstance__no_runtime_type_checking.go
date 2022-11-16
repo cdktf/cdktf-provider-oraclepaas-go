@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package mysqlserviceinstance
 
@@ -66,6 +65,14 @@ func (m *jsiiProxy_MysqlServiceInstance) validatePutTimeoutsParameters(value *My
 }
 
 func validateMysqlServiceInstance_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateMysqlServiceInstance_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateMysqlServiceInstance_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

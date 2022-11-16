@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package provider
 
@@ -14,6 +13,14 @@ func (o *jsiiProxy_OraclepaasProvider) validateOverrideLogicalIdParameters(newLo
 }
 
 func validateOraclepaasProvider_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateOraclepaasProvider_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateOraclepaasProvider_IsTerraformProviderParameters(x interface{}) error {
 	return nil
 }
 

@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package databaseserviceinstance
 
@@ -82,6 +81,14 @@ func (d *jsiiProxy_DatabaseServiceInstance) validatePutTimeoutsParameters(value 
 }
 
 func validateDatabaseServiceInstance_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateDatabaseServiceInstance_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateDatabaseServiceInstance_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 

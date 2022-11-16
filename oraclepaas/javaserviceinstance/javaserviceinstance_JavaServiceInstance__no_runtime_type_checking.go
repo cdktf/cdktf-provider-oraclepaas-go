@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package javaserviceinstance
 
@@ -74,6 +73,14 @@ func (j *jsiiProxy_JavaServiceInstance) validatePutWeblogicServerParameters(valu
 }
 
 func validateJavaServiceInstance_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateJavaServiceInstance_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateJavaServiceInstance_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
