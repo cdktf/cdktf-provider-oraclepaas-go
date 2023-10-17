@@ -15,6 +15,10 @@ func (o *jsiiProxy_OraclepaasProvider) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func validateOraclepaasProvider_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateOraclepaasProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }

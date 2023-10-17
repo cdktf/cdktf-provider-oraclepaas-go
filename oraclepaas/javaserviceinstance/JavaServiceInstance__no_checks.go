@@ -7,6 +7,10 @@ package javaserviceinstance
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (j *jsiiProxy_JavaServiceInstance) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_JavaServiceInstance) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (j *jsiiProxy_JavaServiceInstance) validateGetStringMapAttributeParameters(
 	return nil
 }
 
+func (j *jsiiProxy_JavaServiceInstance) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_JavaServiceInstance) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_JavaServiceInstance) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -72,6 +84,10 @@ func (j *jsiiProxy_JavaServiceInstance) validatePutTimeoutsParameters(value *Jav
 }
 
 func (j *jsiiProxy_JavaServiceInstance) validatePutWeblogicServerParameters(value *JavaServiceInstanceWeblogicServer) error {
+	return nil
+}
+
+func validateJavaServiceInstance_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

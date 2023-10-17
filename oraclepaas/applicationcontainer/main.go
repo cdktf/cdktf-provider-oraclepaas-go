@@ -14,6 +14,7 @@ func init() {
 		"@cdktf/provider-oraclepaas.applicationContainer.ApplicationContainer",
 		reflect.TypeOf((*ApplicationContainer)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "appUrl", GoGetter: "AppUrl"},
 			_jsii_.MemberProperty{JsiiProperty: "archiveUrl", GoGetter: "ArchiveUrl"},
@@ -51,6 +52,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "gitUsernameInput", GoGetter: "GitUsernameInput"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
+			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
 			_jsii_.MemberProperty{JsiiProperty: "loadBalancerSubnets", GoGetter: "LoadBalancerSubnets"},
@@ -59,6 +61,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "manifestFile", GoGetter: "ManifestFile"},
 			_jsii_.MemberProperty{JsiiProperty: "manifestFileInput", GoGetter: "ManifestFileInput"},
 			_jsii_.MemberProperty{JsiiProperty: "manifestInput", GoGetter: "ManifestInput"},
+			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},

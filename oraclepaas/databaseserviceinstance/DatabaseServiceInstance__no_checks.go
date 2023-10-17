@@ -7,6 +7,10 @@ package databaseserviceinstance
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DatabaseServiceInstance) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatabaseServiceInstance) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (d *jsiiProxy_DatabaseServiceInstance) validateGetStringMapAttributeParamet
 	return nil
 }
 
+func (d *jsiiProxy_DatabaseServiceInstance) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DatabaseServiceInstance) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (d *jsiiProxy_DatabaseServiceInstance) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -80,6 +92,10 @@ func (d *jsiiProxy_DatabaseServiceInstance) validatePutStandbyParameters(value *
 }
 
 func (d *jsiiProxy_DatabaseServiceInstance) validatePutTimeoutsParameters(value *DatabaseServiceInstanceTimeouts) error {
+	return nil
+}
+
+func validateDatabaseServiceInstance_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

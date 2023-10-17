@@ -7,6 +7,10 @@ package javaaccessrule
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (j *jsiiProxy_JavaAccessRule) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_JavaAccessRule) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (j *jsiiProxy_JavaAccessRule) validateGetStringMapAttributeParameters(terra
 	return nil
 }
 
+func (j *jsiiProxy_JavaAccessRule) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_JavaAccessRule) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_JavaAccessRule) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (j *jsiiProxy_JavaAccessRule) validateOverrideLogicalIdParameters(newLogica
 }
 
 func (j *jsiiProxy_JavaAccessRule) validatePutTimeoutsParameters(value *JavaAccessRuleTimeouts) error {
+	return nil
+}
+
+func validateJavaAccessRule_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

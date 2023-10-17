@@ -5,10 +5,10 @@ package javaserviceinstance
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v6/javaserviceinstance/internal"
+	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v7/javaserviceinstance/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -138,6 +138,9 @@ type JavaServiceInstance interface {
 	UseIdentityServiceInput() interface{}
 	WeblogicServer() JavaServiceInstanceWeblogicServerOutputReference
 	WeblogicServerInput() *JavaServiceInstanceWeblogicServer
+	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+	// Experimental.
+	AddMoveTarget(moveTarget *string)
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -159,7 +162,12 @@ type JavaServiceInstance interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	ImportFrom(id *string, provider cdktf.TerraformProvider)
+	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Moves this resource to the target resource given by moveTarget.
+	// Experimental.
+	MoveTo(moveTarget *string, index interface{})
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -1258,6 +1266,25 @@ func (j *jsiiProxy_JavaServiceInstance)SetUseIdentityService(val interface{}) {
 	)
 }
 
+// Generates CDKTF code for importing a JavaServiceInstance resource upon running "cdktf plan <stack-name>".
+func JavaServiceInstance_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateJavaServiceInstance_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-oraclepaas.javaServiceInstance.JavaServiceInstance",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
+}
+
 // Checks if `x` is a construct.
 //
 // Use this method instead of `instanceof` to properly detect `Construct`
@@ -1340,6 +1367,17 @@ func JavaServiceInstance_TfResourceType() *string {
 		&returns,
 	)
 	return returns
+}
+
+func (j *jsiiProxy_JavaServiceInstance) AddMoveTarget(moveTarget *string) {
+	if err := j.validateAddMoveTargetParameters(moveTarget); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		j,
+		"addMoveTarget",
+		[]interface{}{moveTarget},
+	)
 }
 
 func (j *jsiiProxy_JavaServiceInstance) AddOverride(path *string, value interface{}) {
@@ -1497,6 +1535,17 @@ func (j *jsiiProxy_JavaServiceInstance) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
+func (j *jsiiProxy_JavaServiceInstance) ImportFrom(id *string, provider cdktf.TerraformProvider) {
+	if err := j.validateImportFromParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		j,
+		"importFrom",
+		[]interface{}{id, provider},
+	)
+}
+
 func (j *jsiiProxy_JavaServiceInstance) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := j.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
@@ -1511,6 +1560,17 @@ func (j *jsiiProxy_JavaServiceInstance) InterpolationForAttribute(terraformAttri
 	)
 
 	return returns
+}
+
+func (j *jsiiProxy_JavaServiceInstance) MoveTo(moveTarget *string, index interface{}) {
+	if err := j.validateMoveToParameters(moveTarget, index); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		j,
+		"moveTo",
+		[]interface{}{moveTarget, index},
+	)
 }
 
 func (j *jsiiProxy_JavaServiceInstance) OverrideLogicalId(newLogicalId *string) {
