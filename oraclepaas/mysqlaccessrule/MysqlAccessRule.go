@@ -5,10 +5,10 @@ package mysqlaccessrule
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v7/mysqlaccessrule/internal"
+	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v8/mysqlaccessrule/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -115,12 +115,22 @@ type MysqlAccessRule interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -134,6 +144,9 @@ type MysqlAccessRule interface {
 	ResetProtocol()
 	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -984,6 +997,19 @@ func (m *jsiiProxy_MysqlAccessRule) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (m *jsiiProxy_MysqlAccessRule) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MysqlAccessRule) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1011,6 +1037,17 @@ func (m *jsiiProxy_MysqlAccessRule) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (m *jsiiProxy_MysqlAccessRule) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MysqlAccessRule) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1019,6 +1056,17 @@ func (m *jsiiProxy_MysqlAccessRule) MoveTo(moveTarget *string, index interface{}
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MysqlAccessRule) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1098,6 +1146,32 @@ func (m *jsiiProxy_MysqlAccessRule) SynthesizeAttributes() *map[string]interface
 	_jsii_.Invoke(
 		m,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MysqlAccessRule) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		m,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (m *jsiiProxy_MysqlAccessRule) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

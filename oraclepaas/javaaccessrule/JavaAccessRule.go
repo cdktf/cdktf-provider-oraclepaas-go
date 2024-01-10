@@ -5,10 +5,10 @@ package javaaccessrule
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v7/javaaccessrule/internal"
+	"github.com/cdktf/cdktf-provider-oraclepaas-go/oraclepaas/v8/javaaccessrule/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -114,12 +114,22 @@ type JavaAccessRule interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -132,6 +142,9 @@ type JavaAccessRule interface {
 	ResetProtocol()
 	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -972,6 +985,19 @@ func (j *jsiiProxy_JavaAccessRule) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (j *jsiiProxy_JavaAccessRule) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		j,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (j *jsiiProxy_JavaAccessRule) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := j.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -999,6 +1025,17 @@ func (j *jsiiProxy_JavaAccessRule) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (j *jsiiProxy_JavaAccessRule) MoveFromId(id *string) {
+	if err := j.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		j,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (j *jsiiProxy_JavaAccessRule) MoveTo(moveTarget *string, index interface{}) {
 	if err := j.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1007,6 +1044,17 @@ func (j *jsiiProxy_JavaAccessRule) MoveTo(moveTarget *string, index interface{})
 		j,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (j *jsiiProxy_JavaAccessRule) MoveToId(id *string) {
+	if err := j.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		j,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
@@ -1078,6 +1126,32 @@ func (j *jsiiProxy_JavaAccessRule) SynthesizeAttributes() *map[string]interface{
 	_jsii_.Invoke(
 		j,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (j *jsiiProxy_JavaAccessRule) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		j,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (j *jsiiProxy_JavaAccessRule) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		j,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)
